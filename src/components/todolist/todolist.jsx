@@ -116,9 +116,9 @@ const Todolist = (props) => {
               ))}
             </List>
           </Paper>
-          <Paper style={{display:'flex',justifyContent:'space-between',textAlign:'center',paddingLeft:10,paddingRight:10}}>
-          <div style={{marginTop:'25px'}}><div ><ListItemText>Total Tasks: {visibleTodos.length}</ListItemText></div></div>
-            <div style={{display:'flex',justifyContent:'center',textAlign:'center'}}><div >
+          <Paper style={{display:'flex',justifyContent:'center',textAlign:'center'}}>
+             <div style={{marginTop:15}}><p>Total Tasks: {visibleTodos.length}</p></div>
+            <div >
               <Filteredlinks filter="SHOW_ALL">All</Filteredlinks>
             </div>
             <div>
@@ -128,7 +128,7 @@ const Todolist = (props) => {
             <div>
               {" "}
               <Filteredlinks filter="SHOW_COMPLETED">Completed</Filteredlinks>
-            </div></div>
+            </div>
           </Paper>
         </Grid>
       </Grid>

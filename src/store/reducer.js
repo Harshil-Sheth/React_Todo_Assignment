@@ -51,10 +51,11 @@ const reducer = (state = initialState, action) =>{
             todo(t, action)
           );
         case "DELETE_TODO":
-            console.log(state.filter(todo => todo.id !== action.id))
-           return [
-            
-            todo(state.filter(todo => todo.id !== action.id), action)
+            var filteredState= state.filter(todo => todo.id === action.id)
+            console.log(filteredState[0].id);
+            state.splice(filteredState, 1);
+            return [
+                ...state
             ];
         case "UPDATE_TODO":
             return state.map(t =>
